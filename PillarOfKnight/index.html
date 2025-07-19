@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>AdventureMan</title>
+	<title>PillarKnight</title>
 	<script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
 	<style>
 		html,
@@ -45,19 +45,19 @@
 	<div id="gameContainer">
 		<script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
 		<canvas id="unity-canvas" data-pixel-art="0"></canvas>
-		<script src="Build/AdventureMan.loader.js"></script>
+		<script src="Build/PillarOfKnight.loader.js"></script>
 		<script>
 			//var vConsole = new window.VConsole();
 			var timeout = false;
 			var delay = 250;
 			var canvas = document.querySelector("#unity-canvas");
 			var config = {
-				dataUrl: "Build/AdventureMan.data",
-				frameworkUrl: "Build/AdventureMan.framework.js",
-				codeUrl: "Build/AdventureMan.wasm",
+				dataUrl: "Build/PillarOfKnight.data",
+				frameworkUrl: "Build/PillarOfKnight.framework.js",
+				codeUrl: "Build/PillarOfKnight.wasm",
 				streamingAssetsUrl: "StreamingAssets",
 				companyName: "DefaultCompany",
-				productName: "AdventureMan",
+				productName: "PillarKnight",
 				productVersion: "1.0",
 			};
 			var scaleToFit;
@@ -97,7 +97,6 @@
 				container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
 			}
 			createUnityInstance(canvas, config, progressHandler).then(function (instance) {
-				window.unityInstance = instance;
 				canvas = instance.Module.canvas;
 				// clear the timeout
 				clearTimeout(timeout);
